@@ -1,0 +1,87 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "ABS",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#single_strings"
+		},
+		{
+			"include": "#commands"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#constants"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.abs",
+				"match": "\\b(f|if|else|return|while|for|in|break|continue)\\b"
+			}]
+		},
+		"conatants": {
+			"patterns": [{
+				"name": "constants.language",
+				"match": "\\b(true|false|null)\\b"
+			}]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment",
+				"match": "#(.*)"
+			}]
+		},
+		"functions": {
+			"patterns": [{
+				"name": "support.function.abs",
+				"match": "\\b(len|rand|exit|flag|pwd|cd|echo|int|round|floor|ceil|number|is_number|stdin|env|arg|type|split|lines|json|fmt|sum|sort|map|some|every|find|filter|unique|contains|str|any|prefix|suffix|repeat|replace|title|lower|upper|wait|kill|trim|trim_by|index|last_index|slice|shift|reverse|push|pop|keys|values|items|join|sleep|source|require|exec|eval)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.abs",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.abs",
+					"match": "\\\\."
+				}
+			]
+		},
+		"single_strings": {
+			"name": "string.quoted.single.abs",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.abs",
+					"match": "\\\\."
+				}
+			]
+		},
+		"commands": {
+			"name": "string.interpolated.abs",
+			"begin": "`",
+			"end": "`",
+			"patterns": [
+				{
+					"name": "constant.character.escape.abs",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.abs"
+}

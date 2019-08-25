@@ -1,0 +1,37 @@
+{
+    "name": "vscode-abs",
+    "displayName": "ABS",
+    "description": "Language support for the ABS programming language",
+    "version": "0.1.0",
+    "publisher": "abs-lang",
+    "repository": "github.com/abs-lang/vscode-abs",
+    "engines": {
+        "vscode": "^1.36.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "abs",
+                "aliases": [
+                    "ABS",
+                    "abs"
+                ],
+                "extensions": [
+                    ".abs",
+                    ".swag"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "abs",
+                "scopeName": "source.abs",
+                "path": "./syntaxes/abs.tmLanguage.json"
+            }
+        ]
+    }
+}
